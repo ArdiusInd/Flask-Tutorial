@@ -4,8 +4,9 @@ from flask import Flask
 def create_app(test_config=None):
     #  create and configure the app
     app = Flask(__name__, instance_relative_config=True)
+    # To generate a new secret key: python -c 'import secrets; print(secrets.token_hex())'
     app.config.from_mapping(
-        SECRET_KEY='dev',
+        SECRET_KEY='e0e93b077e5a95271ac472c242d6512fd13fc5326422a509b6cda92fef5fd2fa',
         DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite')
     )
 
